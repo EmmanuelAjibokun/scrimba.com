@@ -11,6 +11,6 @@ function increment() {
 }
 
 function save() {
-    let saved = count + '-';
-    saveEl.innerText += saved;
+    let saved = count + ' - ';
+    saveEl.textContent += saved;
 }
