@@ -1,8 +1,104 @@
+:root {
+  --darkBlue: #0C4A6E;
+  --grey: #EEEEEE;
+  --background-grey: #E5E5E5;
+  --black: #080001;
+  --pointer-color: #F94F6D;
+  --type-font: 'Cursed Timer ULiL';
+}
+
 body {
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--background-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  background-color: var(--darkBlue);
+  padding: 68px 85px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  gap: 106px;
+}
+
+h3 {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 36px;
+  margin: 0;
+  color: var(--grey);
+}
+
+.home, .guest {
+  text-align: center;
+}
+
+.score {
+  background-color: var(--black);
+  margin: 26px 0px;
+  padding: 0 20px;
+}
+.score > span {
+  font-family: var(--type-font);
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 127px;
+  color: var(--pointer-color)
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.buttons > button {
+  font-family: var(--type-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 7px 10px;
+  color: var(--grey);
+  background: none;
+  border: var(--grey) solid 1px;
+  border-radius: 5px;
+  flex-grow: 1;
+
+  transition: all 200ms ease-in-out;
+}
+.buttons > button:active {
+  background: var(--grey);
+  color: var(--darkBlue);
+}
+
+.reset {
+  display: flex;
+  text-align: center;
+  margin-top: 26px;
+}
+
+.reset-button {
+  font-family: var(--type-font);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--pointer-color);
+  padding: 7px 10px;
+  flex-grow: 1;
+  background-color: var(--black);
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+.reset-button:active {
+  box-shadow: #E5E5E5 0 0 5px;
+  background: none;
+  color: var(--background-grey);
 }
