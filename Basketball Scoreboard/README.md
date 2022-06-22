@@ -1,4 +1,11 @@
-# title(){return this.options.title||this.options.name}
+# Solo Project
+Tools to work with
+- HTML
+- CSS
+- JAVASCRIPT
+- FIGMA
+
+
 
 ## Supporting Scrimba
 
