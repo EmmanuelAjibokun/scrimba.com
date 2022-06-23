@@ -1,26 +1,50 @@
-const plus1 = document.querySelectorAll('.plus1');
-const plus2 = document.querySelectorAll('.plus2');
-const plus3 = document.querySelectorAll('.plus3');
+// const homePlus1 = document.querySelector('.home-plus1');
+// const homePlus2 = document.querySelector('.home-plus2');
+// const homePlus3 = document.querySelector('.home-plus3');
+const addButton = document.querySelectorAll('.buttons');
 let homeScore = document.querySelector('.home-score').textContent;
+
+// const guestPlus1 = document.querySelector('.guest-plus1');
+// const guestPlus2 = document.querySelector('.guest-plus2');
+// const guestPlus3 = document.querySelector('.guest-plus3');
 let guestScore = document.querySelector('.guest-score').textContent;
 
-function updateHomeScore(homeScore) {
-  document.querySelector('.home-score').textContent = homeScore;
+function updateHomeScore(score) {
+  document.querySelector('.home-score').textContent = score;
 }
 
 function updateGuestScore(score) {
-  document.querySelector('.home-guest').textContent = score;
-  console.log(score)
+  document.querySelector('.guest-score').textContent = score;
 }
 
-function add1() {
+function add1ToHome() {
   homeScore = parseInt(homeScore)
   homeScore = homeScore + 1;
   updateHomeScore(homeScore)
-  console.log(homeScore)
 }
 
+function add1ToGuest() {
+  guestScore = parseInt(guestScore)
+  guestScore = guestScore + 1;
+  updateGuestScore(guestScore)
+}
 
-plus1.forEach(button => {
-  button.addEventListener('click', add1)
+function addToScore(e) {
+  if(e.target.matches('.home-plus1')) {
+    add1ToHome()
+    console.log('manny')
+  } else if(e.target.matches('.guest-plus1')) {
+    add1ToGuest()
+  }
+}
+
+// homePlus1.addEventListener('click', e => {
+//   if(e.target.matches('.home-plus1')) {
+//     console.log('manny')
+//   }
+// });
+// guestPlus1.addEventListener('click', add1ToGuest);
+
+addButton.forEach(button => {
+  button.addEventListener('click', addToScore)
 })
