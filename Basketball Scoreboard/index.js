@@ -1,8 +1,8 @@
 const plus1 = document.querySelectorAll('.plus1');
 const plus2 = document.querySelectorAll('.plus2');
 const plus3 = document.querySelectorAll('.plus3');
-let homeScore = document.querySelectorAll('.home-score').textContent;
-let guestScore = document.querySelectorAll('.guest-score').textContent;
+let homeScore = document.querySelector('.home-score').textContent;
+let guestScore = document.querySelector('.guest-score').textContent;
 
 function updateHomeScore(homeScore) {
   document.querySelector('.home-score').textContent = homeScore;
