@@ -114,3 +114,12 @@ h3 {
   background: none;
   color: var(--background-grey);
 }
+
+@media(max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 106px;
+  }
+}
