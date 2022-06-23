@@ -1,12 +1,6 @@
-// const homePlus1 = document.querySelector('.home-plus1');
-// const homePlus2 = document.querySelector('.home-plus2');
-// const homePlus3 = document.querySelector('.home-plus3');
+const resetButton = document.querySelector('.reset-button');
 const addButton = document.querySelectorAll('.buttons');
 let homeScore = document.querySelector('.home-score').textContent;
-
-// const guestPlus1 = document.querySelector('.guest-plus1');
-// const guestPlus2 = document.querySelector('.guest-plus2');
-// const guestPlus3 = document.querySelector('.guest-plus3');
 let guestScore = document.querySelector('.guest-score').textContent;
 
 function updateHomeScore(score) {
@@ -17,34 +11,33 @@ function updateGuestScore(score) {
   document.querySelector('.guest-score').textContent = score;
 }
 
-function add1ToHome() {
-  homeScore = parseInt(homeScore)
-  homeScore = homeScore + 1;
+function addToHome(e) {
+  homeScore = parseInt(homeScore);
+  homeScore = homeScore + parseInt(e.target.value);
   updateHomeScore(homeScore)
 }
 
-function add1ToGuest() {
-  guestScore = parseInt(guestScore)
-  guestScore = guestScore + 1;
+function addToGuest(e) {
+  guestScore = parseInt(guestScore);
+  guestScore = guestScore + parseInt(e.target.value);
   updateGuestScore(guestScore)
 }
 
 function addToScore(e) {
-  if(e.target.matches('.home-plus1')) {
-    add1ToHome()
-    console.log('manny')
-  } else if(e.target.matches('.guest-plus1')) {
-    add1ToGuest()
+  if(e.target.matches('.home-plus')) {
+    addToHome(e)
+  } else if(e.target.matches('.guest-plus')) {
+    addToGuest(e)
   }
 }
 
-// homePlus1.addEventListener('click', e => {
-//   if(e.target.matches('.home-plus1')) {
-//     console.log('manny')
-//   }
-// });
-// guestPlus1.addEventListener('click', add1ToGuest);
-
 addButton.forEach(button => {
   button.addEventListener('click', addToScore)
+})
+
+resetButton.addEventListener('click', () => {
+  document.querySelector('.home-score').textContent = 0;
+  document.querySelector('.guest-score').textContent = 0;
+  homeScore = 0;
+  guestScore = 0;
 })
