@@ -5,7 +5,8 @@ Tools to work with
 - JAVASCRIPT
 - FIGMA
 
-
+## Check out the project on scrimba
+- https://scrimba.com/scrim/coc5c4ed5bc7aa7a19ecc4289
 
 ## Supporting Scrimba
 
