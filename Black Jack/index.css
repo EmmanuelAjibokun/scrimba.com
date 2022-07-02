@@ -3,6 +3,7 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: url("./images/table.png");
+  background-size: cover;
   text-align: center;
   color: white;
   font-weight: 600;
@@ -14,4 +15,14 @@ h1 {
 
 #message-el {
     font-style: italic;
+}
+
+button {
+  color: #016f32;
+  width: 150px;
+  background: goldenrod;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+  padding: 5px 0;
 }
