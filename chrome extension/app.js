@@ -1,3 +1,6 @@
+let myLeads = [];
+const inputEl = document.getElementById("input_el").textContent
+
 function leadSave() {
   console.log("button clicked")
 }
