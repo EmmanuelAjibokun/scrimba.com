@@ -5,6 +5,7 @@ let ulEl = document.getElementById("ul-el");
 
 function leadSave() {
   myLeads.push(inputEl.value)
+  inputEl.value = "";
   renderLeads()
 }
 
