@@ -1,10 +1,10 @@
 let myLeads = [];
-const inputEl = document.getElementById("input_el").textContent
+const inputEl = document.getElementById("input-el");
+const inputButton = document.getElementById('input-btn');
 
 function leadSave() {
-  console.log("button clicked")
+  myLeads.push(inputEl.value)
+  console.log(myLeads)
 }
-
-const inputButton = document.getElementById('input-btn');
 
 inputButton.addEventListener('click', leadSave)
