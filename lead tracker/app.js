@@ -4,7 +4,11 @@ const inputButton = document.getElementById('input-btn');
 let ulEl = document.getElementById("ul-el");
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-console.log(leadsFromLocalStorage)
+if(leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  console.log(myLeads)
+  renderLeads()
+}
 
 function leadSave() {
   myLeads.push(inputEl.value)
