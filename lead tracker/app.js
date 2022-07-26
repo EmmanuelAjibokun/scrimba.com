@@ -3,6 +3,8 @@ const inputEl = document.getElementById("input-el");
 const inputButton = document.getElementById('input-btn');
 let ulEl = document.getElementById("ul-el");
 
+localStorage.setItem("myLeads", "examplesLeads.com")
+
 function leadSave() {
   myLeads.push(inputEl.value)
   inputEl.value = "";
