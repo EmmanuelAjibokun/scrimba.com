@@ -1,9 +1,13 @@
-let myLeads = [];
+let myLeads = ["examplesLeads.com"];
 const inputEl = document.getElementById("input-el");
 const inputButton = document.getElementById('input-btn');
 let ulEl = document.getElementById("ul-el");
 
-localStorage.setItem("myLeads", "examplesLeads.com")
+myLeads.push("google.com")
+localStorage.setItem("myLeads", JSON.stringify(myLeads))
+console.log(myLeads)
+myLeads = JSON.parse(localStorage.getItem("myLeads"))
+console.log(typeof myLeads)
 
 function leadSave() {
   myLeads.push(inputEl.value)
