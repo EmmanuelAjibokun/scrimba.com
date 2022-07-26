@@ -1,18 +1,14 @@
-let myLeads = ["examplesLeads.com"];
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputButton = document.getElementById('input-btn');
 let ulEl = document.getElementById("ul-el");
 
-myLeads.push("google.com")
-localStorage.setItem("myLeads", JSON.stringify(myLeads))
-console.log(myLeads)
-myLeads = JSON.parse(localStorage.getItem("myLeads"))
-console.log(typeof myLeads)
-
 function leadSave() {
   myLeads.push(inputEl.value)
   inputEl.value = "";
+  localStorage.setItem("myLeads", JSON.stringify(myLeads))
   renderLeads()
+  console.log(myLeads)
 }
 
 inputButton.addEventListener('click', leadSave)
@@ -31,3 +27,12 @@ function renderLeads() {
   
   ulEl.innerHTML = listItems;
 }
+
+
+
+
+// myLeads.push("google.com")
+// localStorage.setItem("myLeads", JSON.stringify(myLeads))
+// console.log(myLeads)
+// myLeads = JSON.parse(localStorage.getItem("myLeads"))
+// console.log(typeof myLeads)
