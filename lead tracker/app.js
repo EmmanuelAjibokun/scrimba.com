@@ -5,7 +5,7 @@ let ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
 const saveTab = document.getElementById("tab-btn");
 
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") );
 
 if(leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
@@ -19,7 +19,10 @@ const tabs = [
 
 // 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
 saveTab.addEventListener("click", () => {
-  console.log(tabs[0]["url"])
+  myLeads.push(tabs[0].url)
+  localStorage.setItem("myLeads", JSON.stringify(myLeads))
+  render(myLeads)
+  console.log(Object.keys(tabs[0]))
 })
 
 deleteBtn.addEventListener("dblclick", () => {
