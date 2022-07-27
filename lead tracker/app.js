@@ -3,6 +3,7 @@ const inputEl = document.getElementById("input-el");
 const inputButton = document.getElementById('input-btn');
 let ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
+const saveTab = document.getElementById("tab-btn");
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
@@ -11,6 +12,15 @@ if(leadsFromLocalStorage) {
   console.log(myLeads)
   render(myLeads)
 }
+
+const tabs = [
+  {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
+
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+saveTab.addEventListener("click", () => {
+  console.log(tabs[0]["url"])
+})
 
 deleteBtn.addEventListener("dblclick", () => {
   localStorage.clear()
