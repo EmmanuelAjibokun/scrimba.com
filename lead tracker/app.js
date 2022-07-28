@@ -13,10 +13,6 @@ if(leadsFromLocalStorage) {
   render(myLeads)
 }
 
-const tabs = [
-  {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
-
 // 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
 saveTab.addEventListener("click", () => {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
